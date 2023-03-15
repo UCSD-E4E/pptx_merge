@@ -1,38 +1,49 @@
-"""Example module
+"""Powerpoint Merge
 """
+from argparse import ArgumentParser
+from glob import glob
+from pathlib import Path
 from typing import List
 
-def example_function() -> None:
-    """Example function that prints out a message
-    """
-    print("This is a function that does something")
+import win32com.client
 
-def example_returning_function() -> str:
-    """Example function that returns a value
 
-    Returns:
-        str: Example return value
-    """
-    return "This function returned a string"
-
-def example_complex_function(arg_a: int, arg_b: List[str]) -> str:
-    """Example function that does something complex with a function
+def merge_ppts(output: Path, files: List[Path]):
+    """Merge Powerpoint Presentations together
 
     Args:
-        a (int): Number to insert between strings
-        b (List[str]): Strings to combine
-
-    Returns:
-        str: String in b concatenated using the string representation of a
+        output (Path): Output path
+        files (List[Path]): List of powerpoints to merge
     """
-    return f'{arg_a}'.join(arg_b)
+    ppt_instance = win32com.client.Dispatch('PowerPoint.Application')
+    new_prs = ppt_instance.Presentations.Add()
+    new_prs.SaveAs(str(output.resolve()))
 
-def example_entry_point() -> None:
-    """Example entry point that exersizes all of the module's functions
+    for path in files:
+        prs = ppt_instance.Presentations.Open(str(path.resolve()))
+        prs.Slides.range(range(1, prs.Slides.Count + 1)).copy()
+        ppt_instance.Presentations(output.name).Windows(1).Activate()
+        new_prs.Application.CommandBars.ExecuteMSO('PasteSourceFormatting')
+        prs.Close()
+
+    new_prs.SaveAs(str(output.resolve()))
+    new_prs.Close()
+    ppt_instance.Quit()
+
+def main() -> None:
+    """Main function
     """
-    example_function()
-    print(example_returning_function())
-    print(f"This is a complex function: {example_complex_function(3, ['asdf', 'foo', 'bar'])}")
+    parser = ArgumentParser()
+    parser.add_argument('output', type=Path)
+    parser.add_argument('files', nargs='+', type=str)
+
+    args = parser.parse_args()
+    arg_dict = vars(args)
+    files = []
+    for file_pattern in arg_dict['files']:
+        files.extend(Path(file) for file in glob(file_pattern))
+    arg_dict['files'] = files
+    merge_ppts(**arg_dict)
 
 if __name__ == "__main__":
-    example_entry_point()
+    main()

@@ -3,17 +3,19 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='example_package',
-    version='0.0.0.1',
+    name='e4e_pptx_merge',
+    version='0.1.0.0',
     author='UCSD Engineers for Exploration',
     author_email='e4e@eng.ucsd.edu',
     entry_points={
         'console_scripts': [
-            'ExamplePythonConsoleScript = example_package.example_module:exampleEntryPoint'
+            'pptx_merge = e4e_pptx_merge.pptx_merge:main'
         ]
     },
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+    'pywin32'
+    ],
     extras_require={
         'dev': [
             'pytest',
