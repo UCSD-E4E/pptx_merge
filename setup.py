@@ -9,12 +9,14 @@ setup(
     author_email='e4e@eng.ucsd.edu',
     entry_points={
         'console_scripts': [
-            'pptx_merge = e4e_pptx_merge.pptx_merge:main'
+            'pptx_merge = e4e_pptx_merge.pptx_merge:main',
+            'e4e_meeting_tool = e4e_pptx_merge.e4e_pptx_merge:main',
         ]
     },
     packages=find_packages(),
     install_requires=[
-    'pywin32'
+    'pywin32',
+    'pyyaml',
     ],
     extras_require={
         'dev': [

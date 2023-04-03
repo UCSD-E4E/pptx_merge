@@ -1,0 +1,21 @@
+paths:
+  ASM: \\e4e-nas.ucsd.edu\aye-aye-sleep-monitoring\Presentations
+  BOM: \\e4e-nas.ucsd.edu\baboons\Presentations
+  FS: \\e4e-nas.ucsd.edu\fishsense\Presentations
+  MM: \\e4e-nas.ucsd.edu\mangrove\Presentations
+  AID: \\e4e-nas.ucsd.edu\passive-acoustic-biodiversity\Presentations
+  RCT: \\e4e-nas.ucsd.edu\rct\Presentations
+  SF: \\e4e-nas.ucsd.edu\smartfin-mfg\Presentations
+general: \\e4e-nas.ucsd.edu\programmatics\
+schedule:
+  1: [ASM, BOM, FS, MM, AID, RCT, SF]
+  2: [MM, ASM, RCT]
+  3: [AID, SF, BOM, FS]
+  4: [MM, ASM, RCT]
+  5: [AID, SF, BOM, FS]
+  6: [MM, ASM, RCT]
+  7: [AID, SF, BOM, FS]
+  8: [MM, ASM, RCT]
+  9: [AID, SF, BOM, FS]
+  10: [ASM, BOM, FS, MM, AID, RCT, SF]
+quarter: 2023_Q4
