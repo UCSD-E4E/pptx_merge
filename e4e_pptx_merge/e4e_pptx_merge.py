@@ -22,7 +22,7 @@ class E4eMeetingMerge:
         self.parser.add_argument('--job_file', '-j', type=Path, required=True)
         self.parser.add_argument('--week', '-w', type=int, required=True)
         self.parser.add_argument('--output', '-o', type=Path, default=Path('.'))
-        self.parser.add_argument('--order', choices=['sequence', 'random'], type=str, 
+        self.parser.add_argument('--order', choices=['sequence', 'random'], type=str,
                                  default='sequence')
 
         args = self.parser.parse_args()
