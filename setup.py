@@ -18,6 +18,7 @@ setup(
     'pywin32',
     'pyyaml',
     'pytest',
+    'pyyaml',
     ],
     extras_require={
         'dev': [
