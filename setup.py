@@ -17,6 +17,7 @@ setup(
     install_requires=[
     'pywin32',
     'pyyaml',
+    'pytest',
     ],
     extras_require={
         'dev': [

@@ -8,14 +8,14 @@ paths:
   SF: \\e4e-nas.ucsd.edu\smartfin-mfg\Presentations
 general: \\e4e-nas.ucsd.edu\programmatics\
 schedule:
-  1: [ASM, BOM, FS, MM, AID, RCT, SF]
-  2: [MM, ASM, RCT]
-  3: [AID, SF, BOM, FS]
-  4: [MM, ASM, RCT]
-  5: [AID, SF, BOM, FS]
-  6: [MM, ASM, RCT]
-  7: [AID, SF, BOM, FS]
-  8: [MM, ASM, RCT]
-  9: [AID, SF, BOM, FS]
-  10: [ASM, BOM, FS, MM, AID, RCT, SF]
+  1: [ASM, BOM, FS, MM, AID, RCT, SF] # 4/4
+  2: [MM, ASM, RCT] # 4/11
+  3: [AID, SF, BOM, FS] # 4/18
+  4: [MM, ASM, RCT] # 4/25
+  5: [AID, SF, BOM, FS] # 5/2
+  6: [MM, ASM, RCT] # 5/9
+  7: [AID, SF, BOM, FS] # 5/16
+  8: [MM, ASM, RCT] # 5/23
+  9: [AID, SF, BOM, FS] # 5/30
+  10: [ASM, BOM, FS, MM, AID, RCT, SF] # 6/6
 quarter: 2023_Q4
