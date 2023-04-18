@@ -10,8 +10,8 @@ general: \\e4e-nas.ucsd.edu\programmatics\
 schedule:
   1: [ASM, BOM, FS, MM, AID, RCT, SF] # 4/4
   2: [MM, ASM, RCT] # 4/11
-  3: [AID, SF, FS] # 4/18
-  4: [MM, ASM, RCT, BOM] # 4/25
+  3: [FS, AID, SF] # 4/18
+  4: [MM, ASM, RCT, BOM, SF] # 4/25
   5: [AID, SF, BOM, FS] # 5/2
   6: [MM, ASM, RCT] # 5/9
   7: [AID, SF, BOM, FS] # 5/16
