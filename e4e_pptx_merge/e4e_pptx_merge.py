@@ -60,6 +60,7 @@ class E4eMeetingMerge:
                 presentation = presentation_dir.joinpath(f'Week {self.week_num}.pptx')
                 if presentation.exists():
                     presentations_to_merge.append(presentation)
+            print(presentations_to_merge)
             merge_ppts(merge_output, presentations_to_merge)
             copy(merge_output, self.output_dir.joinpath(f'Week {self.week_num} final.pptx'))
 
